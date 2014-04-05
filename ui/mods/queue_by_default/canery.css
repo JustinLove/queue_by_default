@@ -1,0 +1,8 @@
+.queue_by_default_message {
+  color: white;
+  font-size: 2vh;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  pointer-events: none;
+}
