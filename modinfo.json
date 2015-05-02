@@ -1,0 +1,24 @@
+{
+  "author": "wondible",
+  "build": "80462",
+  "category": ["in-game", "ui"],
+  "context": "client",
+  "date": "2015/05/02",
+  "dependencies": [
+    "com.wondible.pa.live_game_input_refactor"
+  ],
+  "description": "Commands are queued by default, use shift to drop previous queue.",
+  "display_name": "Queue By Default",
+  "forum": "https://forums.uberent.com/threads/wip-queue-by-default.58534/",
+  "id": "queue_by_default",
+  "identifier": "com.wondible.pa.queue_by_default",
+  "priority": 100,
+  "scenes": {
+    "live_game": [
+      "coui://ui/mods/queue_by_default/queue_by_default.js"
+    ]
+  },
+  "signature": "not yet implemented",
+  "version": "1.0.0"
+}
+
