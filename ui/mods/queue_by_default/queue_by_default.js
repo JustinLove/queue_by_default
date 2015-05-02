@@ -1,7 +1,13 @@
-model.shouldQueueCommand = function(event) {
+model.shouldAppendFab = function(event) {
   return !event.shiftKey
 }
+model.shouldExitModeFab = function(event) {
+  return event.shiftKey
+}
 
-model.checkQueueAndWatchForEnd = function(mdevent, counter, onEnd) {
-  return model.shouldQueueCommand(mdevent)
+model.shouldAppendCommand = function(event) {
+  return event.shiftKey || model.cmdQueueCount() > 1
+}
+model.shouldExitModeCommand = function(event) {
+  return false
 }
