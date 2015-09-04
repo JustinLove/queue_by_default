@@ -1,9 +1,9 @@
 {
   "author": "wondible",
-  "build": "80462",
+  "build": "86765",
   "category": ["in-game", "ui"],
   "context": "client",
-  "date": "2015/05/02",
+  "date": "2015/09/04",
   "dependencies": [
     "com.wondible.pa.live_game_input_refactor"
   ],
@@ -19,5 +19,5 @@
     ]
   },
   "signature": "not yet implemented",
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
