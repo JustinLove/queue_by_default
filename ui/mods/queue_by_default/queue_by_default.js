@@ -1,15 +1,15 @@
 (function() {
-  model.shouldAppendFab = function(event) {
+  lgir.shouldAppendFab = function(event) {
     return !event.shiftKey
   }
-  model.shouldExitModeFab = function(event) {
+  lgir.shouldExitModeFab = function(event) {
     return event.shiftKey
   }
 
-  model.shouldAppendCommand = function(event) {
+  lgir.shouldAppendCommand = function(event) {
     return event.shiftKey || model.cmdQueueCount() > 1
   }
-  model.shouldExitModeCommand = function(event) {
+  lgir.shouldExitModeCommand = function(event) {
     return false
   }
 
@@ -23,9 +23,9 @@
   var MiddleButton = 1
   var RightButton = 2
 
-  model.holodeckModeMouseDown.fab = function (mdevent) {
+  lgir.holodeckModeMouseDown.fab = function (mdevent) {
     if (mdevent.button === LeftButton) {
-      model.beginFabDown(mdevent)
+      lgir.beginFabDown(mdevent)
       return true;
     }
     else if (mdevent.button === RightButton) {
@@ -39,7 +39,7 @@
   var holodeckCommandMouseDown = function (command) {
     return function (mdevent) {
       if (mdevent.button === LeftButton) {
-        model.commandModeDown(mdevent, command)
+        lgir.commandModeDown(mdevent, command)
         return true;
       } else if (mdevent.button === RightButton) {
         model.endCommandMode()
@@ -51,7 +51,7 @@
 
   for (var i = 0; i < model.commands().length; ++i) {
     var command = model.commands()[i];
-    model.holodeckModeMouseDown['command_' + command] =
+    lgir.holodeckModeMouseDown['command_' + command] =
       holodeckCommandMouseDown(command);
   }
 })()
