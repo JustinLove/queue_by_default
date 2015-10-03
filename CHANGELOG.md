@@ -1,5 +1,9 @@
 # Queue By Default
 
+## 1.1.2
+
+- Forum url, released
+
 ## 1.1.1
 
 - lgir namespaced
